@@ -17,6 +17,7 @@ export const expressLoader: MicroframeworkLoader = (settings: MicroframeworkSett
         const expressApp: Application = createExpressServer({
             cors: true,
             classTransformer: true,
+            validation: true,
             routePrefix: env.app.routePrefix,
             defaultErrorHandler: false,
             /**
