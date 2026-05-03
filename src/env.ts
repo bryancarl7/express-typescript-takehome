@@ -37,7 +37,6 @@ export const env = {
             middlewares: getOsPaths('MIDDLEWARES'),
             interceptors: getOsPaths('INTERCEPTORS'),
             subscribers: getOsPaths('SUBSCRIBERS'),
-            resolvers: getOsPaths('RESOLVERS'),
         },
     },
     log: {
@@ -54,11 +53,6 @@ export const env = {
         database: getOsEnv('TYPEORM_DATABASE'),
         synchronize: toBool(getOsEnvOptional('TYPEORM_SYNCHRONIZE')),
         logging: getOsEnv('TYPEORM_LOGGING'),
-    },
-    graphql: {
-        enabled: toBool(getOsEnv('GRAPHQL_ENABLED')),
-        route: getOsEnv('GRAPHQL_ROUTE'),
-        editor: toBool(getOsEnv('GRAPHQL_EDITOR')),
     },
     swagger: {
         enabled: toBool(getOsEnv('SWAGGER_ENABLED')),

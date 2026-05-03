@@ -20,6 +20,9 @@ src/api/schema.gql
 # Typing #
 typings/
 
+# SQLite database #
+data/
+
 # Dist #
 dist/
 tsconfig.build.json
