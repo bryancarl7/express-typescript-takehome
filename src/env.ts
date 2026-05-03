@@ -54,6 +54,11 @@ export const env = {
         synchronize: toBool(getOsEnvOptional('TYPEORM_SYNCHRONIZE')),
         logging: getOsEnv('TYPEORM_LOGGING'),
     },
+    security: {
+        corsOrigin: getOsEnv('CORS_ORIGIN'),
+        rateLimitWindowMs: toNumber(getOsEnvOptional('RATE_LIMIT_WINDOW_MS')) || 900000,
+        rateLimitMax: toNumber(getOsEnvOptional('RATE_LIMIT_MAX')) || 100,
+    },
     swagger: {
         enabled: toBool(getOsEnv('SWAGGER_ENABLED')),
         route: getOsEnv('SWAGGER_ROUTE'),

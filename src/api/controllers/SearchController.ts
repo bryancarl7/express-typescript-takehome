@@ -1,4 +1,4 @@
-import { IsNotEmpty } from 'class-validator';
+import { IsNotEmpty, MaxLength } from 'class-validator';
 import { Body, Get, JsonController, Post, QueryParam } from 'routing-controllers';
 import { OpenAPI, ResponseSchema } from 'routing-controllers-openapi';
 
@@ -7,9 +7,11 @@ import { SearchHistoryService, SortField } from '../services/SearchHistoryServic
 
 class SearchBody {
     @IsNotEmpty()
+    @MaxLength(50)
     public username: string;
 
     @IsNotEmpty()
+    @MaxLength(200)
     public searchTerm: string;
 }
 
@@ -50,8 +52,17 @@ export class SearchController {
     public history(
         @QueryParam('username') username: string,
         @QueryParam('sort') sort?: SortField
-    ): Promise<SearchHistory[]> {
+    ): Promise<SearchHistory[]> | { error: string } {
+        if (!username) { return Promise.resolve([]); }
         return this.searchHistoryService.findByUsername(username, sort);
+    }
+
+    @Get('/sort-titles')
+    @OpenAPI({ summary: 'Sort the cached titles for a user' })
+    public sortTitles(@QueryParam('username') username: string): { titles: string[] } | { error: string } {
+        const titles = this.searchHistoryService.sortCachedTitles(username);
+        if (!titles) { return { error: 'No cached results found. Please search first.' }; }
+        return { titles };
     }
 
 }

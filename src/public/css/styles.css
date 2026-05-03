@@ -1,0 +1,205 @@
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.app-card {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    padding: 2rem;
+}
+
+h2 {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.form-label {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.form-control {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    color: #fff;
+    padding: 0.65rem 1rem;
+}
+
+.form-control::placeholder { color: rgba(255,255,255,0.3); }
+.form-control:focus {
+    background: rgba(255,255,255,0.12);
+    border-color: #4e8cff;
+    box-shadow: 0 0 0 3px rgba(78,140,255,0.2);
+    color: #fff;
+}
+
+.btn-primary {
+    background: #4e8cff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.55rem 1.4rem;
+    font-weight: 600;
+}
+.btn-primary:hover { background: #3a78f0; }
+
+.btn-secondary {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    color: #fff;
+    padding: 0.55rem 1.4rem;
+    font-weight: 600;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.18); color: #fff; }
+
+.btn-outline-primary {
+    border: 1px solid #4e8cff;
+    border-radius: 8px;
+    color: #4e8cff;
+    padding: 0.55rem 1.4rem;
+    font-weight: 600;
+}
+.btn-outline-primary:hover { background: #4e8cff; color: #fff; }
+
+.sort-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.sort-bar span {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.sort-bar button {
+    background: transparent;
+    border: 1px solid #4e8cff;
+    border-radius: 8px;
+    color: #4e8cff;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.3rem 0.9rem;
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+}
+.sort-bar button:hover, .sort-bar button.active {
+    background: #4e8cff;
+    color: #fff;
+}
+
+.book-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    transition: background 0.15s;
+}
+.book-item:hover { background: rgba(255,255,255,0.09); }
+
+.book-index {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #4e8cff22;
+    border: 1px solid #4e8cff55;
+    color: #4e8cff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.results-meta {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+.results-meta strong { color: #4e8cff; }
+
+.history-row {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto auto;
+    gap: 1rem;
+    align-items: center;
+    color: #fff;
+    transition: background 0.15s;
+}
+.history-row:hover { background: rgba(255,255,255,0.09); }
+
+.history-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto auto;
+    gap: 1rem;
+    padding: 0 1rem 0.5rem;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-count {
+    background: rgba(78,140,255,0.15);
+    border: 1px solid rgba(78,140,255,0.3);
+    color: #4e8cff;
+    border-radius: 20px;
+    padding: 0.15rem 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.date-label {
+    color: rgba(255,255,255,0.35);
+    font-size: 0.78rem;
+    white-space: nowrap;
+}
+
+#loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem 0;
+}
+
+.spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid rgba(78,140,255,0.2);
+    border-top-color: #4e8cff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.alert-danger {
+    background: rgba(220,53,69,0.15);
+    border: 1px solid rgba(220,53,69,0.3);
+    color: #ff6b6b;
+    border-radius: 10px;
+}
