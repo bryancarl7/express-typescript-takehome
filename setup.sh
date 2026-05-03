@@ -20,7 +20,18 @@ case "$OS" in
         ;;
 esac
 
+echo "Running Unit tests to verify deployment"
+
+npm start build
+npm start test.unit
+
+echo ""
+read -p "You have successfully setup all dependencies. Would you like to start the app? (y/n): " answer
+if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
+    npm start serve
+fi
+
 # TODO:
 # 1. Add comments to source files
 # 2. Cleanup dependency warnings
-# 3. Write tests
+# 3. Dockerize?

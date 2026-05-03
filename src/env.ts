@@ -36,7 +36,6 @@ export const env = {
             controllers: getOsPaths('CONTROLLERS'),
             middlewares: getOsPaths('MIDDLEWARES'),
             interceptors: getOsPaths('INTERCEPTORS'),
-            subscribers: getOsPaths('SUBSCRIBERS'),
         },
     },
     log: {
