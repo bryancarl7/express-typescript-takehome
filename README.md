@@ -46,8 +46,6 @@ Once running, the app is available at:
 | --- | --- |
 | http://localhost:3000 | The search UI |
 | http://localhost:3000/api | API info |
-| http://localhost:3000/swagger | API docs |
-| http://localhost:3000/monitor | Server monitor |
 
 To start the server on its own without running setup again:
 
@@ -59,7 +57,7 @@ npm start serve
 
 ## Personal Notes
 
-This is foreked from the boilerplate repo here: https://github.com/w3tecch/express-typescript-boilerplate
+This is forked from the boilerplate repo here: https://github.com/w3tecch/express-typescript-boilerplate
 
 Great place to start! I gutted a lot of it, but might have left some bits and bobs around.
 
@@ -67,9 +65,17 @@ I had a ton of fun writing this! Hopefully everything is in order, but if you ha
 
 I tried to challenge myself by timeboxing this to 4 hours, I ran over a little bit, but this is what I was able to get.
 
+**Heres some screencaps:**
+
+<img width="1017" height="424" alt="api" src="https://github.com/user-attachments/assets/daf3c009-5847-4450-ba59-92c1367ace36" />
+---
+<img width="1409" height="1261" alt="bryanSearch" src="https://github.com/user-attachments/assets/1d117996-5e03-41eb-8242-92043d7ec0a4" />
+---
+<img width="1242" height="1271" alt="searchHistory" src="https://github.com/user-attachments/assets/8096b879-3e63-44be-84e1-f996173131e6" />
+
 
 
 ### TODO: ###
-# 1. Add comments to source files
-# 2. Cleanup dependency warnings
-# 3. Dockerize?
+1. Add comments to source files
+2. Cleanup dependency warnings
+3. Dockerize?
