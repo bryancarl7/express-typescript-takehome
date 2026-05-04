@@ -1,14 +1,12 @@
 language: node_js
 node_js:
-  - "8.9.4"
+  - "18"
+  - "20"
+  - "22"
 install:
-  - yarn install
-env:
-  - DB_TYPE="sqlite" DB_DATABASE="./mydb.sql" DB_LOGGING=false
+  - npm install --legacy-peer-deps
 script:
-  - npm start test
-  - npm start test.integration
-  - npm start test.e2e
+  - npm start test.unit
   - npm start build
 notifications:
   email: false

@@ -21,6 +21,9 @@ if (Test-Path node_modules) { Remove-Item -Recurse -Force node_modules }
 npm install --legacy-peer-deps
 New-Item -ItemType Directory -Force -Path data | Out-Null
 
+Write-Host "Running unit tests to verify setup..."
+npm start test.unit
+
 Write-Host ""
 $answer = Read-Host "You have successfully setup all dependencies. Would you like to start the app? (y/n)"
 if ($answer -eq "y" -or $answer -eq "Y") {

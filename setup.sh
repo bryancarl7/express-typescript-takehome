@@ -30,8 +30,3 @@ read -p "You have successfully setup all dependencies. Would you like to start t
 if [ "$answer" = "y" ] || [ "$answer" = "Y" ]; then
     npm start serve
 fi
-
-# TODO:
-# 1. Add comments to source files
-# 2. Cleanup dependency warnings
-# 3. Dockerize?

@@ -1,42 +1,24 @@
 {
-  "name": "express-typescript-boilerplate",
-  "version": "3.2.0",
-  "description": "A delightful way to building a Node.js RESTful API Services with beautiful code written in TypeScript",
+  "name": "search-engine",
+  "version": "1.0.0",
+  "description": "A book search application using the Open Library API with search history persistence.",
   "main": "src/app.ts",
   "scripts": {
     "start": "nps",
     "test": "npm start test",
-    "build": "npm start build",
-    "presetup": "yarn install",
-    "setup": "npm start config && npm start setup.script"
+    "build": "npm start build"
   },
   "engines": {
-    "node": ">=8.0.0"
+    "node": ">=18.0.0"
   },
-  "repository": "git+ssh://git@github.com/w3tec/express-typescript-boilerplate.git",
   "keywords": [
     "NodeJS",
     "TypeScript",
     "express",
-    "boilerplate",
-    "skeleton",
-    "starter-kit",
-    "w3tec.ch"
+    "search-engine",
+    "open-library"
   ],
-  "homepage": "https://github.com/w3tec/express-typescript-boilerplate#readme",
-  "author": "w3tec.ch <info@w3tec.ch>",
-  "contributors": [
-    {
-      "name": "David Weber",
-      "email": "david.weber@w3tec.ch",
-      "url": "https://github.com/dweber019"
-    },
-    {
-      "name": "Gery Hirschfeld",
-      "email": "gery.hirschfeld@w3tec.ch",
-      "url": "https://github.com/hirsch88"
-    }
-  ],
+  "author": "Bryan Carl <bryancarl7@gmail.com>",
   "dependencies": {
     "chalk": "^2.4.1",
     "class-validator": "^0.9.1",
